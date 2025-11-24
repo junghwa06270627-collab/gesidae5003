@@ -39,7 +39,8 @@
     .hero {
       position: relative;
       height: 210px;
-      background-image: url("factory-hero"); /* ← 여기 파일명만 실제 GIF 이름과 맞추면 됨 */
+      /* ⚠️ 저장소에 올린 GIF 파일 이름이 factory-hero.gif 라고 가정 */
+      background-image: url("factory-hero.gif");
       background-size: cover;
       background-position: center;
       overflow: hidden;
@@ -172,6 +173,7 @@
     .name-side {
       font-size: 11px;
       color: rgba(167, 196, 230, 0.85);
+      text-align: right;
     }
 
     .tag-row {
@@ -186,5 +188,267 @@
       font-size: 10px;
       padding: 4px 9px;
       background: linear-gradient(135deg, rgba(23, 111, 255, 0.32), rgba(11, 195, 255, 0.14));
-      color: rg
+      color: rgba(225, 244, 255, 0.96);
+      white-space: nowrap;
+    }
+
+    .desc {
+      font-size: 12px;
+      line-height: 1.6;
+      color: rgba(222, 236, 255, 0.9);
+      margin-bottom: 12px;
+    }
+    .desc strong {
+      color: #ffffff;
+    }
+
+    .info-list {
+      margin-top: 4px;
+      margin-bottom: 6px;
+      font-size: 12px;
+      color: rgba(230, 242, 255, 0.9);
+      border-top: 1px solid rgba(52, 82, 128, 0.7);
+      padding-top: 10px;
+    }
+
+    .info-item {
+      display: flex;
+      gap: 6px;
+      margin-top: 6px;
+      align-items: flex-start;
+    }
+    .info-label {
+      min-width: 54px;
+      color: rgba(150, 178, 210, 0.95);
+      font-size: 11px;
+    }
+    .info-text {
+      flex: 1;
+      word-break: keep-all;
+    }
+
+    /* 버튼들 */
+    .btn-wrap {
+      padding: 12px 14px 10px;
+      display: flex;
+      flex-direction: column;
+      gap: 9px;
+    }
+    .btn {
+      display: flex;
+      width: 100%;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      text-decoration: none;
+      padding: 11px 12px;
+      border-radius: 999px;
+      font-size: 14px;
+      font-weight: 600;
+      border: 1px solid transparent;
+      transition: transform 0.12s ease-out, box-shadow 0.12s ease-out,
+                  background 0.12s ease-out, border-color 0.12s ease-out,
+                  opacity 0.12s ease-out;
+    }
+    .btn-primary {
+      background: linear-gradient(135deg, #0f9bff, #35e0ff);
+      color: #060b16;
+      box-shadow: 0 14px 25px rgba(5, 163, 255, 0.45);
+    }
+    .btn-secondary {
+      background: rgba(9, 25, 55, 0.96);
+      color: #e1f1ff;
+      border-color: rgba(90, 130, 190, 0.6);
+    }
+    .btn-kakao {
+      background: #fee500;
+      color: #1e1e1e;
+      border-color: rgba(0,0,0,0.15);
+      box-shadow: 0 10px 22px rgba(0,0,0,0.35);
+    }
+    .btn-kakao .btn-icon {
+      font-size: 18px;
+    }
+    .btn span.sub {
+      font-size: 11px;
+      opacity: 0.85;
+      font-weight: 500;
+    }
+    .btn:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 12px 22px rgba(0, 0, 0, 0.6);
+    }
+    .btn:active {
+      transform: translateY(0);
+      box-shadow: 0 6px 14px rgba(0, 0, 0, 0.7);
+      opacity: 0.95;
+    }
+
+    .btn-icon {
+      font-size: 16px;
+    }
+
+    .footer {
+      text-align: center;
+      font-size: 11px;
+      color: rgba(180, 205, 235, 0.7);
+      padding: 0 12px 12px;
+      line-height: 1.5;
+    }
+    .footer strong {
+      color: #6fd3ff;
+    }
+    .footer .save-tip {
+      margin-top: 4px;
+      font-size: 10px;
+      color: rgba(210, 225, 245, 0.85);
+    }
+
+    @media (max-width: 360px) {
+      .content { padding: 16px 14px 4px; }
+      .btn-wrap { padding: 10px 12px 10px; }
+      .hero-inner { padding: 16px 15px 18px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+
+    <!-- 상단 GIF + 브랜드 헤더 -->
+    <div class="hero-shell">
+      <div class="hero">
+        <div class="hero-inner">
+          <div>
+            <div class="brand-chip">
+              <span class="brand-dot"></span>
+              <span>LEGAL SIGNBOARD · PREMIUM BANNER</span>
+            </div>
+            <div class="hero-title-block">
+              <div class="hero-en">GESIDAE.COM</div>
+              <div class="hero-ko"><span>게시대닷컴</span></div>
+              <div class="hero-sub">
+                합법 지정게시대 · 현수막 제작·게시 원스톱 서비스
+              </div>
+            </div>
+          </div>
+
+          <div class="hero-footer-row">
+            <div>
+              <strong>이주원 대표</strong><br />
+              합법 옥외광고 / 지정게시대 컨설팅
+            </div>
+            <div>
+              전 지역 접수 가능<br />
+              010-9288-5003
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 본문 카드 -->
+    <div class="card">
+      <div class="content">
+        <div class="name-row">
+          <div class="name-main">
+            <span>이주원</span><small>대표</small>
+          </div>
+          <div class="name-side">
+            합법 지정게시대 전문 브랜드 · 게시대닷컴
+          </div>
+        </div>
+
+        <div class="tag-row">
+          <span class="tag">지자체 허가 합법 지정게시대</span>
+          <span class="tag">현수막 제작 · 설치 · 철거</span>
+          <span class="tag">전국 소상공인 / 기업 상담</span>
+        </div>
+
+        <p class="desc">
+          <strong>합법 + 신뢰 + 효율</strong>을 기준으로 대표님의 소중한
+          사업을 깨끗하고 오래 노출되는 옥외광고로 돕고 있습니다.
+          지정게시대 상담부터 디자인·제작·설치까지 한 번에 맡겨주세요.
+        </p>
+
+        <div class="info-list">
+          <div class="info-item">
+            <div class="info-label">주소</div>
+            <div class="info-text">국세청로 4, 413-2호</div>
+          </div>
+          <div class="info-item">
+            <div class="info-label">홈페이지</div>
+            <div class="info-text">http://gesidae.com</div>
+          </div>
+          <div class="info-item">
+            <div class="info-label">이메일</div>
+            <div class="info-text">gesidae5003@naver.com</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 액션 버튼들 -->
+      <div class="btn-wrap">
+
+        <!-- 카카오톡 상담 -->
+        <a class="btn btn-kakao" href="https://pf.kakao.com/_xowHNn" target="_blank">
+          <span class="btn-icon">💛</span>
+          <span>카카오톡으로 상담하기</span>
+          <span class="sub">채널 추가 후 1:1 문의</span>
+        </a>
+
+        <!-- 전화 -->
+        <a class="btn btn-primary" href="tel:01092885003">
+          <span class="btn-icon">📞</span>
+          <span>전화 상담하기</span>
+          <span class="sub">010-9288-5003</span>
+        </a>
+
+        <!-- 문자 -->
+        <a class="btn btn-secondary" href="sms:01092885003">
+          <span class="btn-icon">💬</span>
+          <span>문자로 문의 남기기</span>
+        </a>
+
+        <!-- 이메일 -->
+        <a class="btn btn-secondary" href="mailto:gesidae5003@naver.com">
+          <span class="btn-icon">✉️</span>
+          <span>이메일 보내기</span>
+        </a>
+
+        <!-- 홈페이지 -->
+        <a class="btn btn-secondary" href="http://gesidae.com" target="_blank">
+          <span class="btn-icon">🌐</span>
+          <span>홈페이지 열기</span>
+        </a>
+
+        <!-- 위치 -->
+        <a class="btn btn-secondary"
+           href="https://map.naver.com/v5/search/국세청로 4 413-2호"
+           target="_blank">
+          <span class="btn-icon">📍</span>
+          <span>네이버지도에서 위치 보기</span>
+        </a>
+
+        <!-- 연락처 저장(vCard) -->
+        <a class="btn btn-secondary" href="gesidae-contact.vcf">
+          <span class="btn-icon">💾</span>
+          <span>연락처 파일 저장하기</span>
+          <span class="sub">휴대폰 주소록에 추가</span>
+        </a>
+      </div>
+
+      <div class="footer">
+        © <strong>게시대닷컴</strong> · 합법 지정게시대 전문 브랜드
+        <div class="save-tip">
+          위의 <strong>연락처 파일 저장하기</strong> 버튼을 누른 뒤,<br />
+          휴대폰에서 “연락처에 추가”를 선택하면
+          <strong>이주원 · 게시대닷컴</strong> 정보가 자동으로 저장됩니다.
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
+
+
 
